@@ -8,7 +8,6 @@
 #'
 #' @return
 #' @export
-#'
 plot_highchart <-
 function(preds){
   col <- RColorBrewer::brewer.pal(3, "Set1")

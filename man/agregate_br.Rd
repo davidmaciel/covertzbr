@@ -17,6 +17,3 @@ death from COVID-19 in Brazil.
 Takes a tibble returned by \code{read_covid} and summarises it onto
 country level
 }
-\examples{
-read_covid() \%>\% agregate_br()
-}

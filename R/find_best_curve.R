@@ -1,29 +1,15 @@
+
 #' Find the best gompertz curve
 #'
-#' Given a grid of parameters combinations, the function estimates the gompertz
-#' curve for each of them. Next, it calculates the sum of squared residuals and
-#' gets the one with the lowest sum of squared residuals.
+#' Given a set of possible parameters for the gompertz curve, finds the best
+#' candidate, which is the one with the minimal sum of least squared residuals
 #'
-#' @param grid. A tibble returned by \code(get_initial_params)
-#' @param obs. A vector of observed total deaths.
-#' @param parallel. Logical. If true, uses parallel processing from the future and
-#' furrr packages. Defautls to true.
+#' @param grid A tibble returned from \code {get_initial_params}
+#' @param obs A vector of observed deaths
+#' @param parallel Logical. If true, uses parallel processing for speed up.
 #'
-#' @return. A named numeric vector with the values of lambda, mu and alpha from the
-#' best curve
-#'
+#' @return A named vector of three values: lamba, mu and a
 #' @export
-#'
-#' @examples
-#' \dontrun{
-#' obs <- read_covid() %>% agregate_br()
-#' obs <- obs$total_deaths
-#'
-#' get_initial_params(lambda_min = 40, lambda_max = 80,mu_min = 800,
-#' mu_max = 2000, a_min = 60000, a_min = 1000000) %>%
-#' find_best_curve(obs)
-#' }
-#'
 #'
 find_best_curve <-
 function(grid, obs,  parallel = T) {

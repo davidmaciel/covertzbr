@@ -9,8 +9,6 @@
 #' death from COVID-19 in Brazil.
 #' @export
 #'
-#' @examples
-#' read_covid() %>% agregate_br()
 agregate_br <- function(cov){
   cov %>%
     dplyr::filter(is_repeated == F & place_type == "state") %>%
