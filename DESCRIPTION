@@ -28,3 +28,5 @@ Imports:
     highcharter,
     purrr,
     RColorBrewer
+URL: https://github.com/davidmaciel/covertzbr
+BugReports: https://github.com/davidmaciel/covertzbr/issues
