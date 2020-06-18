@@ -7,7 +7,7 @@
 find_best_curve(grid, obs, parallel = T)
 }
 \arguments{
-\item{grid}{A tibble returned from \code {get_initial_params}}
+\item{grid}{A tibble returned from \code{get_initial_params}}
 
 \item{obs}{A vector of observed deaths}
 

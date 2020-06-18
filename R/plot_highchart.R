@@ -4,7 +4,7 @@
 #' dates, plots a highchart of observed x predicted values, along with prediction
 #' intervals
 #'
-#' @param preds. A tibble, returned by \code{predic_nls}
+#' @param preds A tibble, returned by \code{predic_nls}
 #'
 #' @return
 #' @export

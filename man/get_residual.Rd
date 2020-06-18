@@ -7,15 +7,15 @@
 get_residual(time, obs, lambda, mu, a)
 }
 \arguments{
+\item{time}{Integer. A vector of one or more values, counted as the number of days.}
+
+\item{obs}{Numeric. A vector of obseverd total deaths. It must be of the same length as \code{time}}
+
 \item{lambda}{Numeric. A single value for the lambda parameter in the gompertz equation.}
 
 \item{mu}{Numeric. A single value for the mu parameter in the gompertz equation.}
 
 \item{a}{Numeric. A single value for de alpha parameter in the gompertz equation.}
-
-\item{time.}{Integer. A vector of one or more values, counted as the number of days.}
-
-\item{obs.}{Numeric. A vector of obseverd total deaths. It must be of the same length as \code{time}}
 }
 \value{
 Numeric. A single value, representing the sum of squared residuals.

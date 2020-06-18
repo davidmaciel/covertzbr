@@ -17,6 +17,9 @@ get_initial_params(
 )
 }
 \arguments{
+\item{lambda_min}{Numeric. Minimun possible value for the lambda parameter in the gompertz
+equation.}
+
 \item{lambda_max}{Numeric. Maximun possible value for the lambda parameter in the gompertz
 equation.}
 
@@ -37,9 +40,6 @@ equation.}
 \item{int_mu}{Numeric. Increment of the sequence for the possible values of the mu parameter.}
 
 \item{int_a}{Numeric. Increment of the sequence for the possible values of the alpha parameter.}
-
-\item{lambda_min.}{Numeric. Minimun possible value for the lambda parameter in the gompertz
-equation.}
 }
 \value{
 a tibble, with every possible combination between the values in the sequences

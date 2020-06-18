@@ -4,7 +4,7 @@
 #' Given a set of possible parameters for the gompertz curve, finds the best
 #' candidate, which is the one with the minimal sum of least squared residuals
 #'
-#' @param grid A tibble returned from \code {get_initial_params}
+#' @param grid A tibble returned from \code{get_initial_params}
 #' @param obs A vector of observed deaths
 #' @param parallel Logical. If true, uses parallel processing for speed up.
 #'

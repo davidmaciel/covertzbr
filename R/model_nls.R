@@ -2,12 +2,12 @@
 #'
 #' Given a vector of observations, estimates a non linear model by
 #' weighted least squares using the gompertz equation and the values of parameters from
-#' the best curve found trough \code {find_best_curve} as initial values
+#' the best curve found trough \code{find_best_curve} as initial values
 #'
 #'
 #'
-#' @param obs. Numeric. A vector of observed total deaths.
-#' @param best_curve. A vector, returned from \code {find_best_curve}
+#' @param obs Numeric. A vector of observed total deaths.
+#' @param best_curve A vector, returned from \code{find_best_curve}
 #'
 #' @return. A non-linear model object
 #'

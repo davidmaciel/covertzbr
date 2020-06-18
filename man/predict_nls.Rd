@@ -7,6 +7,10 @@
 predict_nls(m, min_time, max_time, alfa = 0.05, obs, data)
 }
 \arguments{
+\item{m}{Model, returned by \code{model_nls()}}
+
+\item{min_time}{Integer. Starting value of the time span, counted as number of days.}
+
 \item{max_time}{Integer. Ending value of the time span, counted as number of days.}
 
 \item{alfa}{Numeric. Alpha level for the prediction interval}
@@ -14,10 +18,6 @@ predict_nls(m, min_time, max_time, alfa = 0.05, obs, data)
 \item{obs}{Numeric. A vector of observed deaths, to be appended in the result for comparison}
 
 \item{data}{Date. A vector of dates, to be apprended in the result for comparison.}
-
-\item{m.}{Model, returned by \code{model_nls()}}
-
-\item{min_time.}{Integer. Starting value of the time span, counted as number of days.}
 }
 \value{
 A tibble.

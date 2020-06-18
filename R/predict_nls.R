@@ -2,8 +2,8 @@
 #'
 #' Given a a non linear model by generates predictions and predictions  intervals
 #'
-#' @param m. Model, returned by \code{model_nls()}
-#' @param min_time. Integer. Starting value of the time span, counted as number of days.
+#' @param m Model, returned by \code{model_nls()}
+#' @param min_time Integer. Starting value of the time span, counted as number of days.
 #' @param max_time Integer. Ending value of the time span, counted as number of days.
 #' @param alfa Numeric. Alpha level for the prediction interval
 #' @param obs Numeric. A vector of observed deaths, to be appended in the result for comparison

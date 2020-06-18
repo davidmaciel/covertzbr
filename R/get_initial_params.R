@@ -3,7 +3,7 @@
 #' Given a min and and a max values for the three parameters in the gompertz equation,
 #' generates a sequence of possible values and all the combinations of them.
 #'
-#' @param lambda_min. Numeric. Minimun possible value for the lambda parameter in the gompertz
+#' @param lambda_min Numeric. Minimun possible value for the lambda parameter in the gompertz
 #' equation.
 #' @param lambda_max Numeric. Maximun possible value for the lambda parameter in the gompertz
 #' equation.

@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "https://orcid.org/0000-0002-2391-1312"))
-Description: Use a gompertz curve to model the evolution of COVID-19 epidemic in Brazil
+Description: Use a gompertz curve to model the evolution of COVID-19 epidemic in Brazil.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -27,6 +27,7 @@ Imports:
     readr,
     highcharter,
     purrr,
-    RColorBrewer
+    RColorBrewer,
+    tidyr
 URL: https://github.com/davidmaciel/covertzbr
 BugReports: https://github.com/davidmaciel/covertzbr/issues

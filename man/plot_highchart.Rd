@@ -7,7 +7,7 @@
 plot_highchart(preds)
 }
 \arguments{
-\item{preds.}{A tibble, returned by \code{predic_nls}}
+\item{preds}{A tibble, returned by \code{predic_nls}}
 }
 \value{
 

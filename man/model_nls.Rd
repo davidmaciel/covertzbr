@@ -7,9 +7,9 @@
 model_nls(obs, best_curve)
 }
 \arguments{
-\item{obs.}{Numeric. A vector of observed total deaths.}
+\item{obs}{Numeric. A vector of observed total deaths.}
 
-\item{best_curve.}{A vector, returned from \code {find_best_curve}}
+\item{best_curve}{A vector, returned from \code{find_best_curve}}
 }
 \value{
 . A non-linear model object
@@ -17,5 +17,5 @@ model_nls(obs, best_curve)
 \description{
 Given a vector of observations, estimates a non linear model by
 weighted least squares using the gompertz equation and the values of parameters from
-the best curve found trough \code {find_best_curve} as initial values
+the best curve found trough \code{find_best_curve} as initial values
 }
