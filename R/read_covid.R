@@ -6,9 +6,6 @@
 #' beggining of the COVID-19 epidemic in Brazil.
 #' @export
 #'
-#' @examples
-#' read_covid()
-#' @author David Neto
 read_covid <- function(){
   readr::read_csv("https://brasil.io/dataset/covid19/caso_full/?format=csv")
 }

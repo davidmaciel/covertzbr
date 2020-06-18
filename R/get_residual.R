@@ -12,9 +12,6 @@
 #' @return Numeric. A single value, representing the sum of squared residuals.
 #'
 #'
-#' @examples
-#' obs <- 1:100
-#' get_residual(1:100, obs, 50, 1000,100000)
 get_residual <-
 function(time, obs, lambda, mu, a){
   curva <- do_gompertz(time, lambda = lambda, mu = mu, a = a)

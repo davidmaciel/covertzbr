@@ -24,7 +24,3 @@ Numeric. A single value, representing the sum of squared residuals.
 Calculate the sum of squared residuals for a gompertz curve, given
 a vector of observed total deaths.
 }
-\examples{
-obs <- 1:100
-get_residual(1:100, obs, 50, 1000,100000)
-}

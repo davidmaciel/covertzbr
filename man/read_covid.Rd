@@ -13,9 +13,3 @@ beggining of the COVID-19 epidemic in Brazil.
 \description{
 Imports the most recent covid-19 data of Brazil from \url{https://brasil.io/covid19/}
 }
-\examples{
-read_covid()
-}
-\author{
-David Neto
-}
