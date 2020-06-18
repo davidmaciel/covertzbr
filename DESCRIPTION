@@ -2,15 +2,29 @@ Package: covertzbr
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "David",
+           family = "Mello Neto",
            role = c("aut", "cre"),
            email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           comment = c(ORCID = "https://orcid.org/0000-0002-2391-1312"))
+Description: Use a gompertz curve to model the evolution of COVID-19 epidemic in Brazil
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
+Suggests: 
+    spelling
+Language: en-US
+Imports: 
+    magrittr,
+    dplyr,
+    tibble,
+    future,
+    furrr,
+    propagate,
+    GISTools,
+    readr,
+    highcharter,
+    purrr,
+    RColorBrewer
