@@ -4,13 +4,16 @@
 \alias{plot_highchart}
 \title{Plot a highchart}
 \usage{
-plot_highchart(preds)
+plot_highchart(obs, preds)
 }
 \arguments{
+\item{obs}{A tibble, with two columns: "date", of Date type, and a vector of total
+deaths}
+
 \item{preds}{A tibble, returned by \code{predic_nls}}
 }
 \value{
-
+a highchart
 }
 \description{
 given a tibble of predicted and observed total deaths, with a column indicating

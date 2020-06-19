@@ -6,14 +6,13 @@
 #' @param min_time Integer. Starting value of the time span, counted as number of days.
 #' @param max_time Integer. Ending value of the time span, counted as number of days.
 #' @param alfa Numeric. Alpha level for the prediction interval
-#' @param obs Numeric. A vector of observed deaths, to be appended in the result for comparison
-#' @param data Date. A vector of dates, to be apprended in the result for comparison.
+#'
 #'
 #' @return A tibble.
 #' @export
 #'
 predict_nls <-
-function(m, min_time, max_time, alfa = 0.05, obs, data){
+function(m, min_time, max_time, alfa = 0.05){
     propagate::predictNLS(m,
                newdata = data.frame(t = min_time:max_time),
                interval = "prediction", alpha = alfa) %>%
@@ -23,8 +22,10 @@ function(m, min_time, max_time, alfa = 0.05, obs, data){
     dplyr::rename("preds" = 1,"lower" = 2,"max" = 3) %>%
     dplyr::mutate_all(round) %>%
     dplyr::mutate(
-      lower = if_else(lower < 0, 0, lower),
-      obs = obs,
-      data = data
+      lower = dplyr::if_else(lower < 0, 0, lower),
+      date = seq(lubridate::ymd("2020-03-17"),
+                 lubridate::ymd("2020-03-17")+(max_time - min_time),
+                 by = 1)
     )
   }
+

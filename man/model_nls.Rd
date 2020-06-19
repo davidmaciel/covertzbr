@@ -4,12 +4,12 @@
 \alias{model_nls}
 \title{Non linear modelling of the gompertz curve}
 \usage{
-model_nls(obs, best_curve)
+model_nls(best_curve, obs)
 }
 \arguments{
-\item{obs}{Numeric. A vector of observed total deaths.}
-
 \item{best_curve}{A vector, returned from \code{find_best_curve}}
+
+\item{obs}{Numeric. A vector of observed total deaths.}
 }
 \value{
 . A non-linear model object

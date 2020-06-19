@@ -4,7 +4,7 @@
 \alias{predict_nls}
 \title{Non-linear model and prediction intervals for the best curve}
 \usage{
-predict_nls(m, min_time, max_time, alfa = 0.05, obs, data)
+predict_nls(m, min_time, max_time, alfa = 0.05)
 }
 \arguments{
 \item{m}{Model, returned by \code{model_nls()}}
@@ -14,10 +14,6 @@ predict_nls(m, min_time, max_time, alfa = 0.05, obs, data)
 \item{max_time}{Integer. Ending value of the time span, counted as number of days.}
 
 \item{alfa}{Numeric. Alpha level for the prediction interval}
-
-\item{obs}{Numeric. A vector of observed deaths, to be appended in the result for comparison}
-
-\item{data}{Date. A vector of dates, to be apprended in the result for comparison.}
 }
 \value{
 A tibble.

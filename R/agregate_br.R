@@ -1,4 +1,4 @@
-#' Agregate data in Brazil
+#' Aggregate data in Brazil
 #'
 #' Takes a tibble returned by \code{read_covid} and summarises it onto
 #' country level
@@ -9,7 +9,7 @@
 #' death from COVID-19 in Brazil.
 #' @export
 #'
-agregate_br <- function(cov){
+aggregate_br <- function(cov){
   cov %>%
     dplyr::filter(is_repeated == F & place_type == "state") %>%
     dplyr::select(date, new_deaths) %>%

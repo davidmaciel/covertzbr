@@ -28,6 +28,8 @@ Imports:
     highcharter,
     purrr,
     RColorBrewer,
-    tidyr
+    tidyr,
+    lubridate,
+    forcats
 URL: https://github.com/davidmaciel/covertzbr
 BugReports: https://github.com/davidmaciel/covertzbr/issues

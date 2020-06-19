@@ -11,9 +11,10 @@
 #'
 #' @return. A non-linear model object
 #'
+#' @export
 #'
 model_nls <-
-function(obs,best_curve){
+function(best_curve, obs){
   nls(formula("y~a*exp(-exp(mu*exp(1)/a*(lambda-t)+1))"),
       data = data.frame(y = obs, t = 1:length(obs)),
       start = best_curve)

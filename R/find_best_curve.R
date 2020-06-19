@@ -15,7 +15,7 @@ find_best_curve <-
 function(grid, obs,  parallel = T) {
   if (parallel == T) {
     future::plan("cluster")
-    grid %>% mutate(res = furrr::future_pmap_dbl(
+    grid %>% dplyr::mutate(res = furrr::future_pmap_dbl(
       list(lambda, mu, a),
       get_residual,
       time = 1:length(obs),
