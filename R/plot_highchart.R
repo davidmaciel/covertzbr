@@ -15,6 +15,7 @@ function(obs, preds){
   col <- col[1:2]
   col <- GISTools::add.alpha(col, 0.8)
 preds_obs <- make_df(obs, preds)
+preds <- preds_obs %>% dplyr::filter(Tipo == "Previstas")
   highcharter::hchart(preds_obs, "line",
          highcharter::hcaes(x = Data, y = `Mortes confirmadas`, group = Tipo),
          opacity = 0) %>%
@@ -23,7 +24,7 @@ preds_obs <- make_df(obs, preds)
     highcharter::hc_yAxis(floor = 0) %>%
     highcharter::hc_colors(colors = col) %>%
     highcharter::hc_add_series(preds, name = "Intervalo", type = "arearange",
-                  highcharter::hcaes(x = date, y = preds,
+                  highcharter::hcaes(x = Data, y = `Mortes confirmadas`,
                         low = lower,
                         high = max),
                   color = highcharter::hex_to_rgba("gray", 0.1),

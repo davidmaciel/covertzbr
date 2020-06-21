@@ -23,9 +23,5 @@ function(m, min_time, max_time, alfa = 0.05){
     dplyr::mutate_all(round) %>%
     dplyr::mutate(
       lower = dplyr::if_else(lower < 0, 0, lower),
-      date = seq(lubridate::ymd("2020-03-17"),
-                 lubridate::ymd("2020-03-17")+(max_time - min_time),
-                 by = 1)
-    )
-  }
+      day_count = seq(min_time, max_time, by = 1)) }
 
