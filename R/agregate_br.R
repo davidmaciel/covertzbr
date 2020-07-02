@@ -20,7 +20,7 @@ aggregate_br <- function(cov){
     dplyr::filter(total_deaths > 0) %>%
     dplyr::mutate(day_count = 1:nrow(.))
   if(x$total_deaths[nrow(x)] < x$total_deaths[nrow(x)-1]){
-    x<-slice(x, 1:nrow(x)-1)
+    x<-dplyr::slice(x, 1:nrow(x)-1)
   }
   x
 }
