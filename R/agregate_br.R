@@ -11,11 +11,11 @@
 #'
 aggregate_br <- function(cov){
   cov %>%
-    dplyr::filter(is_repeated == F & place_type == "state") %>%
-    dplyr::select(date, new_deaths) %>%
+    dplyr::select(date, deaths) %>%
+    dplyr::mutate(date = lubridate::ymd(date)) %>%
     dplyr::arrange(date) %>%
     dplyr::group_by(date) %>%
-    dplyr::summarise(new_deaths = sum(new_deaths)) %>%
+    dplyr::summarise(new_deaths = sum(deaths)) %>%
     dplyr::mutate(total_deaths = cumsum(new_deaths)) %>%
     dplyr::ungroup() %>%
     dplyr::filter(total_deaths > 0) %>%

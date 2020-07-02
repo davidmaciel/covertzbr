@@ -30,6 +30,7 @@ Imports:
     RColorBrewer,
     tidyr,
     lubridate,
-    forcats
+    forcats,
+    jsonlite
 URL: https://github.com/davidmaciel/covertzbr
 BugReports: https://github.com/davidmaciel/covertzbr/issues

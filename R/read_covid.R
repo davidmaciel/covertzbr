@@ -7,5 +7,5 @@
 #' @export
 #'
 read_covid <- function(){
-  readr::read_csv("https://brasil.io/dataset/covid19/caso_full/?format=csv")
+  jsonlite::fromJSON("https://brasil.io/api/dataset/covid19/caso/data?place_type=state&page_size=10000") %>% purrr::pluck("results")
 }

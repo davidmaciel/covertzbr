@@ -11,7 +11,7 @@ make_df <- function(obs, preds){
                   "Tipo" = type,
                   lower,
                   max) %>%
-    dplyr::mutate("Data" = lubridate::ymd("2020-03-17")+Dias)
+    dplyr::mutate("Data" = lubridate::ymd("2020-03-17")+(Dias-1))
 
 }
 
