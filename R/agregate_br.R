@@ -10,17 +10,18 @@
 #' @export
 #'
 aggregate_br <- function(cov){
-  x<-cov %>%
-    dplyr::select(date, deaths) %>%
+  cov %>%
+    dplyr::filter(place_type == "state") %>%
+    dplyr::select(date, new_deaths) %>%
     dplyr::mutate(date = lubridate::ymd(date)) %>%
     dplyr::arrange(date) %>%
     dplyr::group_by(date) %>%
-    dplyr::summarise(total_deaths = sum(deaths)) %>%
+    dplyr::summarise(new_deaths = sum(new_deaths)) %>%
+    dplyr::mutate(total_deaths = cumsum(new_deaths),
+                  day_count = 1:nrow(.)) %>%
     dplyr::ungroup() %>%
-    dplyr::filter(total_deaths > 0) %>%
-    dplyr::mutate(day_count = 1:nrow(.))
-  if(x$total_deaths[nrow(x)] < x$total_deaths[nrow(x)-1]){
-    x<-dplyr::slice(x, 1:nrow(x)-1)
-  }
-  x
+    dplyr::filter(total_deaths > 0)
+
+
 }
+

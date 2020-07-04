@@ -1,11 +1,14 @@
-#' Read Covid-19 Data
+#' Get Covid-19 data from Brasil.io
 #'
-#' Imports the most recent covid-19 data of Brazil from \url{https://brasil.io/covid19/}
+#' Get all the available data from Brasil.io api, at city level.
 #'
-#' @return A tibble. Each row corresponds to a city/state and a date since de
-#' beggining of the COVID-19 epidemic in Brazil.
+#'
+#' @return
 #' @export
 #'
 read_covid <- function(){
-  jsonlite::fromJSON("https://brasil.io/api/dataset/covid19/caso/data?place_type=state&page_size=10000") %>% purrr::pluck("results")
-}
+read_csv("https://data.brasil.io/dataset/covid19/caso_full.csv.gz",locale = locale(encoding = "UTF-8"))
+  }
+
+
+

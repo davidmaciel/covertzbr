@@ -2,14 +2,13 @@
 % Please edit documentation in R/read_covid.R
 \name{read_covid}
 \alias{read_covid}
-\title{Read Covid-19 Data}
+\title{Get Covid-19 data from Brasil.io}
 \usage{
 read_covid()
 }
 \value{
-A tibble. Each row corresponds to a city/state and a date since de
-beggining of the COVID-19 epidemic in Brazil.
+
 }
 \description{
-Imports the most recent covid-19 data of Brazil from \url{https://brasil.io/covid19/}
+Get all the available data from Brasil.io api, at city level.
 }
