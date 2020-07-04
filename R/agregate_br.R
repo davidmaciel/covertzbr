@@ -17,10 +17,10 @@ aggregate_br <- function(cov){
     dplyr::arrange(date) %>%
     dplyr::group_by(date) %>%
     dplyr::summarise(new_deaths = sum(new_deaths)) %>%
-    dplyr::mutate(total_deaths = cumsum(new_deaths),
-                  day_count = 1:nrow(.)) %>%
+    dplyr::mutate(total_deaths = cumsum(new_deaths)) %>%
     dplyr::ungroup() %>%
-    dplyr::filter(total_deaths > 0)
+    dplyr::filter(total_deaths > 0) %>%
+    dplyr::mutate(day_count = 1:nrow(.))
 
 
 }
