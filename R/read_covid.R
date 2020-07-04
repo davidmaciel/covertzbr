@@ -7,7 +7,7 @@
 #' @export
 #'
 read_covid <- function(){
-read_csv("https://data.brasil.io/dataset/covid19/caso_full.csv.gz",locale = locale(encoding = "UTF-8"))
+readr::read_csv("https://data.brasil.io/dataset/covid19/caso_full.csv.gz",locale = locale(encoding = "UTF-8"))
   }
 
 
